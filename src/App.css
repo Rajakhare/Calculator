@@ -1,0 +1,80 @@
+/* Page center */
+body {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Calculator box */
+.calculator {
+  width: 280px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Input display */
+#inputBox {
+  width: 94%;
+  height: 60px;
+  background: #ffeb3b;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  outline: none;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* All buttons */
+button {
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* Hover effect */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Button colors */
+button:nth-child(1) {
+  background: #ff5722; /* Clear */
+}
+
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12) {
+  background: #ffa000; /* Operators */
+}
+
+button:nth-child(16) {
+  background: #8bc34a; /* = */
+  grid-row: span 2;
+}
+
+/* Number buttons */
+button:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(8)):not(:nth-child(12)):not(:nth-child(16)) {
+  background: #42a5f5;
+}
